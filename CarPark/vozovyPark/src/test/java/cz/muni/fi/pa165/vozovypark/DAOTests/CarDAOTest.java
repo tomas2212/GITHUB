@@ -38,6 +38,8 @@ public class CarDAOTest extends AbstractDAOTest {
         Car car2 = carDao.getCarById(car1.getId());
         assertEquals(car1, car2);
 
+        assertEquals(4, 5);
+
         try {
             carDao.insert(null);
             fail("Inserted null entity");
@@ -59,6 +61,9 @@ public class CarDAOTest extends AbstractDAOTest {
         Car car3 = carDao.getCarById(car1.getId());
 
         assertEquals(car3.getSpz(), car2.getSpz());
+
+        String s = null;
+        s.trim();
 
         try {
             carDao.update(null);
@@ -85,6 +90,8 @@ public class CarDAOTest extends AbstractDAOTest {
         carDao.remove(car2);
 
         assertNull(carDao.getCarById(car1.getId()));
+        
+        assertEquals(5, 4);
 
         try {
             carDao.remove(null);
