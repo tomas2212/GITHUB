@@ -11,6 +11,7 @@ import java.sql.DriverManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import org.junit.After;
+import org.junit.Ignore;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -108,6 +109,7 @@ public class CarDAOTest extends AbstractDAOTest {
 
     }
 
+    @Ignore
     @Test
     public void getAllCarsTest() {
         Car car1 = new Car();
